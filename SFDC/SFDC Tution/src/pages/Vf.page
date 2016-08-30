@@ -1,0 +1,25 @@
+<apex:page sidebar="false">
+  <b> Visual Force Concepts <br/>
+   What is Visualforce<br/>
+  Default Salesforce Look and feel Tags </b>
+  <!-- 
+    3.  <apex:enhancedlist/>
+    4. <apex:detail>
+    5. <apex:related lIst>
+    6. <apex:listview>
+    7. <apex:pageblock>
+    8. <apex:pageblocktable>
+    9. <apex:repeat>
+    10.<apex:dataTable>
+    11.<apex:pageblockSection>
+    12.<apex:pageblockSectionItem>
+    13.<apex:tab>
+    14.<apex:tabpanel>
+    15.<apex:panelgroup>
+    16.<apex:panelbar>
+    17.<apex:toolbar>
+    18.<apex:toolbargroup>
+    19.<apex:sectionHeader/> 
+    20.<apex:pagemessage>-->
+  
+</apex:page>

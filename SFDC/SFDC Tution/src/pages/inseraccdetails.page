@@ -1,0 +1,11 @@
+<apex:page controller="insertcontroller">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageblockSection columns="2">
+                <apex:inputField value="{!acc.name}" />
+                <apex:inputfield value="{!acc.phone}" />
+                <apex:commandButton value="Save Account Details" action="{!saveaccdetails}"/>
+            </apex:pageblockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

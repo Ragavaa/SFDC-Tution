@@ -1,0 +1,8 @@
+<apex:page controller="Standardcontroller" extensions="BackEndclass,class3"  readOnly="true">
+    <apex:form >
+        
+    </apex:form>
+    <apex:form >
+    
+    </apex:form>
+</apex:page>

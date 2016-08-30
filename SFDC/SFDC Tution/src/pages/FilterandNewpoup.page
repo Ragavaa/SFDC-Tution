@@ -1,0 +1,64 @@
+<apex:page controller="Filtercontroller" sidebar="false">
+     <style type="text/css">
+
+        .popup
+        {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            width: 500px;
+            margin-left: -250px;
+            top:80px;
+        }
+
+        .popupBg
+        {
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 70);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+
+    </style>
+    <apex:form >
+       Filter Rating : <apex:inputField value="{!acc.rating}"/>
+       Filter by Type :<apex:inputfield value="{!acc.type}"/>
+       <apex:commandButton value="Get Details" action="{!getdetails}"/>
+        <apex:commandButton value="Create New Lead" action="{!showPopup}" rerender="popup" style="float:right;"/><br/><br/>
+          
+          <apex:outputPanel id="popup">
+        <apex:outputPanel styleClass="popupBg" layout="block" rendered="{!displayPopUp}"/>
+            <apex:outputPanel styleClass="popup" layout="block" rendered="{!displayPopUp}">
+               <!-- Create New Input fields --->
+               <apex:pageblock >
+                   <apex:pageblockSection columns="2">
+                       <apex:inputField value="{!acc.name}"/>
+                       <apex:inputField value="{!acc.phone}"/>
+                       <apex:inputField value="{!acc.rating}"/>
+                   </apex:pageblockSection>
+               </apex:pageblock>
+               <apex:commandButton value="Save" action="{!saveaccdetails}"/>
+                <apex:commandButton value="Close" action="{!closePopup}" rerender="popup" immediate="true"/>
+            </apex:outputPanel>
+        </apex:outputPanel>
+        
+        <apex:pageBlock >
+        <h1 style="color:red;font-family:verdana;">Account Details {!lstacc.size} </h1>
+            <apex:pageBlockTable value="{!lstacc}" var="a">
+                <apex:column value="{!a.name}"/>
+                <apex:column value="{!a.phone}"/>
+                <apex:column value="{!a.rating}"/>
+                <apex:column value="{!a.type}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

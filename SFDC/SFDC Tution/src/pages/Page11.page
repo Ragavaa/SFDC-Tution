@@ -1,0 +1,27 @@
+<!--*******************************
+Author: Raghavendra Reddy
+Page Name : Page11
+Functional Area: Opportunity
+Dependencies: If Any.....
+Purpose : Main Theme of this page is how to rerender a specific block
+Modification Details: 
+******************************-->
+<apex:page standardController="Opportunity">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:PageblockSection columns="1">
+                <apex:inputField value="{!Opportunity.Name}" />
+                <apex:inputField value="{!Opportunity.StageName}">
+                    <apex:actionSupport event="onchange" reRender="ajaxrequest" />
+                </apex:inputField>
+            </apex:PageblockSection>
+            
+            <!-- Based upon onchange below action will performs -->
+            <apex:outputPanel id="ajaxrequest">
+                <apex:pageBlockSection rendered="{!Opportunity.StageName=='Qualification'}">
+                        This is rerender section
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

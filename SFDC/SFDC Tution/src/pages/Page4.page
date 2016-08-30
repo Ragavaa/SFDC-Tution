@@ -1,0 +1,25 @@
+<apex:page standardController="Account" recordSetVar="accounts">
+    <!-- Apex:Pageblock,apex:pageblocktable,pageblockbuttons,apex:pageblocksection,sectionite ---->
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageblockSection columns="3">
+                <apex:pageblockSectionItem >
+                    <apex:pageblockTable value="{!accounts}" var="a">
+                        <apex:column value="{!a.name}"/>
+                    </apex:pageblockTable>
+                </apex:pageblockSectionItem>
+                <apex:pageblockSectionItem >
+                    <apex:pageblockTable value="{!accounts}" var="a">
+                        <apex:column value="{!a.name}"/>
+                    </apex:pageblockTable>
+                </apex:pageblockSectionItem>
+                <apex:pageblockSectionItem >
+                    <apex:pageblockTable value="{!accounts}" var="a">
+                        <apex:column value="{!a.name}"/>
+                    </apex:pageblockTable>
+                </apex:pageblockSectionItem>
+                
+            </apex:pageblockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

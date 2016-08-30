@@ -1,0 +1,20 @@
+<apex:page controller="Renderrerendercon">
+ <!-- Render and Rerender Demo -->
+ <apex:form >
+   <apex:pageBlock >
+    <apex:commandButton value="Show A" action="{!ShowBlockMethod}"/>
+    <apex:commandButton value="Show B" action="{!showBlockBmethod}"/>
+   </apex:pageBlock>
+    
+    <!-- Show A Table--->
+   <apex:pageBlock rendered="{!ShowpageBlockFlag}">
+    Show A table
+   </apex:pageBlock>
+   
+   <!-- Show B Table --->
+   <apex:pageblock rendered="{!ShowpageBlockBFlag}">
+       Show B table
+   </apex:pageblock>
+   
+ </apex:form>
+</apex:page>

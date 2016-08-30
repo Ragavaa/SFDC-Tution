@@ -1,0 +1,11 @@
+<apex:page standardController="Contact" recordSetVar="Contacts" sidebar="false" renderAs="PDF"><!-- contenttype="application/vnd.ms-excel"> -->
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageblockTable value="{!Contacts}" var="c">
+                <apex:column value="{!c.name}"/>
+                <apex:column value="{!c.phone}"/>
+                <apex:column value="{!c.email}"/>
+            </apex:pageblockTable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

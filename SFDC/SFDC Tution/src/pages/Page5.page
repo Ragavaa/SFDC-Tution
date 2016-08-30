@@ -1,0 +1,40 @@
+<apex:page standardController="Account">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageblockSection >
+            <!---- Input Field (based upon data type displays here)-------->
+                <apex:inputField value="{!Account.name}"/>
+                <apex:inputField value="{!Account.rating}"/>  
+                <apex:inputField value="{!Account.Billingstreet}"/>
+                <apex:inputField value="{!Account.shippingstreet}"/>
+                <apex:inputField value="{!Account.BillingCity}"/>
+                <apex:inputField value="{!Account.shippingcity}"/>
+                <apex:inputField value="{!Account.shippingcity}"/>
+                <apex:inputField value="{!Account.shippingcity}"/>
+                  
+                <apex:inputField value="{!Account.BillingCity}"/>    
+                <apex:inputField value="{!Account.BillingCountry}"/>
+                <apex:inputField value="{!Account.BillingGeocodeAccuracy}"/>
+                    
+                <!--- Input Text(Don't consider the data type) 
+                <apex:inputText value="{!Account.name}"/>
+                <apex:inputTextarea value="{!Account.rating}"/>------>
+
+            </apex:pageblockSection>
+            
+            <apex:commandLink value="Copy Billing country to Shipping Country" style="float:right;color:red;font-family:vedana;font-size:1.2em;"/>
+            <a href="https://ap2.salesforce.com/001/e?retURL=%2F001%2Fo" target="_blank">Copy Billing country to Shipping Country</a>
+            
+            <!-- Static Resource image calling ---->
+            
+            <img src="/resource/1471647406000/Flag" style="height:100px;width:100px;"/><br/>
+            <apex:image value="{!$Resource.Flag}" style="height:100px;width:100px;"/>
+             <!------ Page block buttons ------->
+                <apex:pageblockButtons >
+                    <apex:commandButton value="Save" action="{!save}"/>
+                    <apex:commandButton value="Save and New"/>
+                    <apex:commandButton value="Cancel"/>
+                </apex:pageblockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

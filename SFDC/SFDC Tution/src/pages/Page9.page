@@ -1,0 +1,12 @@
+<apex:page standardController="Account" recordSetVar="Accounts" renderAs="PDF">
+    <apex:form >
+    <!-- Component Refer in visualforce Page(Repeated code we have to put it on component)-->
+   <!-- <c:Flag ></c:Flag>-->
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!accounts}" var="a" rows="100">
+                <apex:column value="{!a.name}"/>
+                <apex:column value="{!a.phone}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

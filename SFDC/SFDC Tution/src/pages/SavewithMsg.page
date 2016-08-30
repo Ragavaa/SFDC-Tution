@@ -1,0 +1,8 @@
+<apex:page controller="SavewithmsgController">
+    <apex:form >
+        <apex:pageMessages />
+        First Name:<apex:inputtext value="{!firstname}"/><br/><br/>
+        Last Name :<apex:inputtext value="{!lastname}"/><br/><br/>
+        <apex:commandButton value="Save" action="{!savedetails}"/>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,49 @@
+<apex:page standardController="Account" recordSetVar="Accounts">
+    <h1 style="Color:red;font-size:1.2em;font-family:crusive;"> TabPanel :</h1>
+    <!-- Tab Panel For Displaying multiple objects data in a sinle tab --->
+    <apex:tabPanel switchType="client" selectedTab="tab2" >
+        <apex:tab label="Accounts" name="tab1" id="tabOne">
+           <apex:form >
+               <apex:pageBlock >
+                   <apex:pageBlockTable value="{!Accounts}" var="a">
+                       <apex:column value="{!a.name}"/>    
+                       <apex:column value="{!a.phone}"/>
+                   </apex:pageBlockTable>
+               </apex:pageBlock>
+           </apex:form> 
+        </apex:tab>
+        <apex:tab label="Contacts" name="tab2" id="tabTwo">Content for Contact Tab</apex:tab>
+        <apex:tab label="Opportunities" name="tab3" id="tabthree">Content for Opportunities Tab</apex:tab>
+    </apex:tabPanel>
+    
+     <!-- Panel Bar -->
+    <br/><br/>
+    <h1 style="Color:red;font-size:1.2em;font-family:crusive;"> Panel Bar :</h1>
+   
+    <apex:panelBar >
+        <apex:panelBarItem label="Account">
+              <apex:form >
+               <apex:pageBlock >
+                   <apex:pageBlockTable value="{!Accounts}" var="a">
+                       <apex:column value="{!a.name}"/>    
+                       <apex:column value="{!a.phone}"/>
+                   </apex:pageBlockTable>
+               </apex:pageBlock>
+           </apex:form> 
+        </apex:panelBarItem>
+        <apex:panelBarItem label="Contact">Displaying Contact Details</apex:panelBarItem>
+        <apex:panelBarItem label="Opportunities">Displaying Opportunity Details</apex:panelBarItem>
+    </apex:panelBar>
+    
+    <!-------- Tool Bar ----------->
+    <br/><br/>
+    <h1 style="Color:red;font-size:1.2em;font-family:crusive;"> Tool Bar :</h1>
+    
+    <apex:toolbar id="theToolbar">
+    <apex:outputText value="Salesforce"/>
+        <apex:toolbarGroup itemSeparator="line" id="toobarGroup">
+            <apex:outputLink value="http://www.google.com">Google</apex:outputLink>
+            <apex:outputLink value="http://www.Facebook.com">Facebook</apex:outputLink>
+        </apex:toolbarGroup>
+    </apex:toolbar>
+</apex:page>

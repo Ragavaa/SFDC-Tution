@@ -1,0 +1,31 @@
+<!--*******************************
+Author: Raghavendra Reddy
+Page Name : Page12
+Dependencies: If Any.....
+Purpose : Main Theme of this page is how to Render a specific block
+Modification Details: 
+****************************** -->
+<apex:page controller="renderspecificblockcontroller">
+     <apex:form >
+         <apex:commandButton value="ShowAccountrecords" action="{!showaccdetails}" />
+         <apex:commandButton value="Showcontactrecords" action="{!showcondetails}" />
+         
+         <apex:pageBlock >
+         
+             <apex:outputPanel id="accren">
+             <!-- Account records table --->
+                 <apex:pageBlockTable value="{!acclst}" var="a" rendered="{!accdet}" >
+                     <apex:column value="{!a.name}"/>
+                     <apex:column value="{!a.phone}"/>
+                 </apex:pageBlockTable> <br/><br/>
+             </apex:outputPanel>
+             
+             <!-- once contact clicks this table will renderd here --->
+             <apex:pageBlockTable value="{!lstcon}" var="c" rendered="{!condet}">
+                 <apex:column value="{!c.name}"/>
+                 <apex:column value="{!c.phone}"/>
+             </apex:pageBlockTable> 
+             
+         </apex:pageBlock>
+     </apex:form>
+</apex:page>

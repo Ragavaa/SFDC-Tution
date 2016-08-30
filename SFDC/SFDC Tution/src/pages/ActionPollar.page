@@ -1,0 +1,8 @@
+<apex:page controller="actionpollerController">
+    <apex:form >
+        <apex:pageBlock id="pgplck">
+              <apex:actionPoller action="{!CounterMethod}" reRender="pgplck" interval="5"/>
+                      {!seconds } seconds since the action poller was called !!
+         </apex:pageBlock>
+      </apex:form>
+</apex:page>

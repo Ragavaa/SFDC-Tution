@@ -1,0 +1,20 @@
+<apex:page controller="ActionFunandsupportController">
+ <apex:form >
+    <h1>Demonstration of difference between Action function and Action Support</h1>
+    <apex:actionFunction name="myactionfun"  action="{!actionFunMethod}" reRender="outptText"/><br></br> <br></br> 
+    Input Text <apex:inputText >
+    <apex:actionSupport action="{!actionSupMethod}" event="onclick" reRender="outptText" />
+    </apex:inputText> <br></br>
+    Click me to call action function method   <apex:inputcheckbox onclick="myJavaMethod()" /><br></br> <br></br>   
+    <apex:pageBlock >
+    <apex:outputText value="{!Display_This_String}" id="outptText"/>
+    </apex:pageBlock>         
+    <script>
+    function myJavaMethod(){
+    var checkinput = confirm('Are sure you wnat to call action function method?');
+    if(checkinput == true) 
+    myactionfun();
+    }
+    </script>
+ </apex:form> 
+</apex:page>

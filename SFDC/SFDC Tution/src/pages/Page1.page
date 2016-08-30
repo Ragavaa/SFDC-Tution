@@ -1,0 +1,8 @@
+<apex:page standardController="Account" sidebar="false">
+    <!-- Picklist Filter Displaying --->
+    <apex:enhancedList type="Account" height="800" width="800"/>
+   
+    <!-- Displaying list of Records by using List view --->
+    <apex:listViews type="Account"/>
+    
+</apex:page>

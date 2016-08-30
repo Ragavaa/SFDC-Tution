@@ -1,0 +1,61 @@
+<!--*******************************
+Author: Raghavendra Reddy
+Page Name : Page15(Action Function)
+Dependencies: If Any.....
+Purpose : Main Theme of this page is specific time interval section loading
+Modification Details: 
+****************************** -->
+<apex:page standardController="Account" extensions="AccountSetupUploadFormext">
+    <script>
+    function submitcall() {
+        submitcallfun();
+    }
+</script>
+<script>
+    function cancelcall() {
+        cancelfun();
+    }
+</script>
+
+    <apex:form >
+     <apex:actionFunction name="submitcallfun" action="{!AccountSetupUpload}"/>
+ <apex:actionFunction name="cancelfun" action="{!cancel}"/>
+ 
+                Account Name:
+        <apex:outputField value="{!Account.name}" label="Account"/>
+               Opportunity Name: 
+        <apex:outputField value="{!Account.phone}" label="Opportunity"/>
+               Project Name: 
+        <apex:outputField value="{!Account.Name}" label="Project Name"/>
+        <apex:inputFile value="{!csvfileaccsetupupload}"  filename="{!csvaccset}"/>
+        <p style="color:blue;font-family:crusive;font-size:1em;">Please upload .csv file format</p>
+        <p style="color:blue;font-family:crusive;font-size:1em;"> Please cross check your locations</p>
+        
+        <!--<apex:commandButton value="Account Setup Upload" action="{!AccountSetupUpload}" title="Upload .csv files"/>
+        <apex:commandButton value="Cancel" action="{!cancel}"/>-->
+        
+         <button type="button"  onclick="submitcall()" class="btn slds-button slds-button--brand">Submit</button>
+          <button type="button"  onclick="cancelcall()" class="btn slds-button slds-button--brand">Cancel</button>
+        
+        <apex:outputPanel rendered="{!conlst.size >0}">
+        <table >
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!conlst}" var="con">
+                    <tr>
+                        <td>{!con.lastname}</td>
+                        <td>{!con.phone}</td>
+                        <td>{!con.email}</td>
+                    </tr>
+                </apex:repeat>
+            </tbody>
+        </table>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

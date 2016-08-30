@@ -1,0 +1,15 @@
+<!--*******************************
+Author: Raghavendra Reddy
+Page Name : Page13(Action Pollar)
+Dependencies: If Any.....
+Purpose : Main Theme of this page is specific time interval section loading
+Modification Details: 
+****************************** -->
+<apex:page controller="actionpollerController" sidebar="false">
+    <apex:form >
+        <apex:pageBlock id="pgplck">
+              <apex:actionPoller action="{!CounterMethod}" reRender="pgplck" interval="5"/>
+                      {!seconds } seconds since the action poller was called !!
+         </apex:pageBlock>
+      </apex:form>
+</apex:page>

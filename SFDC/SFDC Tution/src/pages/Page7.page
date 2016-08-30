@@ -1,0 +1,26 @@
+<apex:page standardController="Account" recordSetVar="Accounts">
+    <apex:pageBlock >
+        <apex:pageBlockSection columns="3">
+        <!-- Pageblock Table --->
+            <apex:pageBlockSectionItem >
+                <apex:pageBlockTable value="{!Accounts}" var="c">
+                    <apex:column value="{!c.name}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSectionItem>
+            
+            <!-- apex:data table --->
+            <apex:pageblockSectionItem >
+                <apex:dataTable value="{!Accounts}" var="a"> 
+                    <apex:column value="{!a.name}"/>
+                </apex:dataTable>
+            </apex:pageblockSectionItem>
+            
+            <!---- Rapeat --->
+           <apex:pageBlockSectionItem >
+               <apex:repeat value="{!accounts}" var="a">
+                {!a.name}
+                </apex:repeat>
+           </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

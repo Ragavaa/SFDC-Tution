@@ -1,0 +1,10 @@
+<apex:page standardController="Account">
+    <apex:pageBlock title="Contacts">
+    <apex:form >
+        <!-- Based upon url id We are getting account related contacts --->
+        <apex:datalist value="{! account.Contacts}" var="contact">
+            {! contact.Name}
+        </apex:datalist>
+    </apex:form>
+</apex:pageBlock>
+</apex:page>

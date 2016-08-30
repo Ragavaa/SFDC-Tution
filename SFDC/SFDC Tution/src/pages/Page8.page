@@ -1,0 +1,17 @@
+<apex:page standardController="Account" recordSetVar="Accounts">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!accounts}" var="a" rows="30">
+                <apex:column value="{!a.name}"/>
+                <apex:column value="{!a.phone}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+        <!-- Pagination Logic here --->
+        <apex:panelgrid columns="2">
+            <apex:commandbutton value="Previous" action="{!Previous}"/>
+            <apex:commandLink value="Next" action="{!Next}"/>
+        </apex:panelgrid>
+        
+    </apex:form>
+</apex:page>

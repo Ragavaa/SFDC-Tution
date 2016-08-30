@@ -1,0 +1,16 @@
+<apex:page controller="PaginationSimpleController" >
+<apex:form >
+    <apex:pageBlock id="details">
+        <apex:pageblockTable value="{!memb}" var="m">
+            <apex:column value="{!m.Name}"/>
+            <apex:column value="{!m.phone}"/>            
+        </apex:pageblockTable>
+        <apex:pageblockButtons >
+            <apex:commandButton value="<<" rerender="details" action="{!beginning}" disabled="{!prev}"/>
+            <apex:commandButton value="<" rerender="details" action="{!previous}" disabled="{!prev}"/>
+            <apex:commandButton value=">" rerender="details" action="{!next}" disabled="{!nxt}"/>
+            <apex:commandButton value=">>" rerender="details" action="{!end}" disabled="{!nxt}"/>                                    
+        </apex:pageblockButtons>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

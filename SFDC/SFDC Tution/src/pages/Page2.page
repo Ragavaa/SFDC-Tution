@@ -1,0 +1,7 @@
+<apex:page standardController="Account">
+    <!-- Display data based upon URL Id --->
+    <apex:detail relatedList="false"/>
+    
+    <!-- Related Objets details displays here --->
+    <apex:relatedList list="contacts"/>
+</apex:page>

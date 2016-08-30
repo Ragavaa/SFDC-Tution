@@ -1,0 +1,138 @@
+<apex:page sidebar="false">
+<apex:form >
+    <apex:pageblock >
+        <apex:pageblockSection columns="3">
+        <apex:pageblockSectionItem >
+        <h1 style="font-family:verdana;font-size:1.4em;color:red;"> Admin Concepts </h1>
+    <h1 style="color:blue;font-family:calibri;font-size:1.2em;">
+        <body>
+            <ol>
+                <li>What is Salesforce?</li>
+                <li>What is cloud Computing?</li>
+                <li>What is Production?</li>
+                <li>What is sandbox?</li>
+                <li>What is URLs for Sandbox and Production?</li>
+                <li>Users,Profiles?</li>
+                <li>Roles?</li>
+                <li>Public Groups?</li>
+                <li>Permission Sets?</li>
+                <li>Salesforce A?</li>
+                <li>How to Rename Standard Tab Names Changing?</li>
+                <li>Company Profile Information?</li>
+                <li>Network Access?</li>
+                <li>How to Create Domain?</li>
+                <li>Login page UI changes and Logo Changes?</li>
+                <li>How to Create Apps,Objects and Fields.</li>
+                <li>Validation Rules?</li>
+                <li>Pagelayouts?</li>
+                <li>Dependant Picklists?</li>
+                <li>Record Types?</li>
+                <li>Work Flow Rules and Its Actions?</li>
+                <li>Work Flow Rule Criterias?</li>
+                <li>Time dependant work flows?</li>
+                <li>Global Picklists?</li>
+                <li>Search layouts?</li>
+                <li>Buttons Links and Actions?</li>
+                <li>Audit Trail and Login Ip Trace?</li>
+                <li>Tab Overriding?</li>
+                <li>Email Templates?</li>
+                <li>Approval Process?</li>
+                <li>Web to lead?</li>
+                <li>Email to case?</li>
+                <li>Escalation Rules?</li>
+                <li>Assignemnt rules?</li>
+                <li>Auto responce Rules?</li>
+                <li>Process Builder?</li>
+                <li>Reports and Dashboards?</li>
+                <li>Schedule Reports?</li>
+                <li>DataLoader?</li>
+                <li>Salesforce 1?</li>
+                <li>Salesforce 1 Offline?</li>
+                <li>Offline Brief case ?</li>
+                <li>Salesforce to Salesforce Integration?</li>
+                <li>Two Factor authentication?</li>
+
+                
+            </ol>
+        </body>
+    </h1>
+     </apex:pageblockSectionItem>
+     
+     <!--- Visuaforce --->
+     <apex:pageblockSectionItem >
+     <h1 style="font-family:verdana;font-size:1.4em;color:red;"> VisualForce Concepts </h1>
+    <h1 style="color:blue;font-family:calibri;font-size:1.2em;">
+        <body>
+            <ol>
+                <li>What is Visualforce</li>
+                <li>Why we go for Customization</li>
+                <li>How to create visualforce page</li>
+                <li>apex:relatedlist</li>
+                <li>apex:detail</li>
+                <li>apex:enhancedlist</li>
+                <li>apex:listview</li>
+                <li>apex:Tabpanel</li>
+                <li>apex:tab</li>
+                <li>apex:toolbar</li>
+                <li>apex:toolbargroup</li>
+                <li>apex:panelbar</li>
+                <li>apex:panelbaritem</li>
+                <li> Remaining Visualforce Tags </li>
+                <li> How many ways we can call repeated visualforce code</li>
+                <li> Visualforce Components </li>
+                <li> View State </li>
+                <li> Order Of execution of Visualforce</li>
+                <li> Render, Rerender and Renderedas </li>
+                <li> Ajax Functions[Action Function,Action region, Acction Support, Action Status,Action Pollar] </li>
+            </ol>
+        </body>
+    </h1>
+     </apex:pageblockSectionItem>
+     <!------------- Apex Concepts ---------------->
+     
+          <apex:pageblockSectionItem >
+          <h1 style="font-family:verdana;font-size:1.4em;color:red;"> Apex Concepts </h1>
+    <h1 style="color:blue;font-family:calibri;font-size:1.2em;">
+        <body>
+            <ol>
+                <li>  Data Types </li>
+                <li>  Methods and Variables </li>
+                <li>  How many places we can write Code? </li>
+                <li>  Collections and its methods with examples</li>
+                <li>  What is the difference between List and Set </li>
+                <li>  SOQL </li>
+                <li>  SOQL inner queries(Parent to Child,Child to Parent) </li>
+                <li>  SOSL </li>
+                <li>  What is the difference between SOQL and SOSL</li>
+                <li>  List of account records Displays in Vfpage </li>
+                <li>  Simple Popup </li>
+                <li>  By using apex data Insert (Save). </li>
+                <li>  How to get URL Id </li>
+                <li>  /e pass edit id to URL. </li>
+                <li>  Vfpage Filters(Apply Multiple FIlters). </li>
+                <li>  What is the difference between insert and Database.Insert</li>
+                <li>  Dynamic SOQL </li>
+                <li>  Pagereference </li>
+                <li>  @annotations</li>
+                <li>  Apex Governor limits </li>
+                <li>  Simple Wrapper Class </li>
+                <li>  Triggers </li>
+                <li>  Simple Batch Class </li>
+                <li>  Differences between Insert and Database.Insert </li>
+                <li>  Schedule class </li>
+                <li>  Test classes? Why we write for test classes? </li>
+                <li>  Deployment ways(Change sets,Eclipse and Aside.IO)</li>
+                <li>  Order of execution </li>
+                <li>  Coding Standards </li>
+                <li>  Integration </li>
+                
+            </ol>
+        </body>
+    </h1>
+     </apex:pageblockSectionItem>
+     
+    </apex:pageblockSection>
+    
+    </apex:pageblock>
+ </apex:form>
+</apex:page>
